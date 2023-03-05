@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { getRandomHexColor } from './GetRandomColor';
+import { getRandomHexColor } from '../utils/GetRandomColor';
 import {
   StatisticsContainer,
   StatisticsTitle,
