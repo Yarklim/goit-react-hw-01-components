@@ -12,38 +12,36 @@ import {
   UserStatElement,
 } from './Profile.styled';
 
-const Profile = (user) => {
-	const { username, tag, location, avatar, stats } = user;
-
+const Profile = ({ username, tag, location, avatar, stats }) => {
 	return (
 		<UserCard>
-		<UserData>
-			<UserImage
-				src={avatar}
-				alt={username}
-				width="320"
-			/>
-			<UserName>{username}</UserName>
-			<UserTag>@{tag}</UserTag>
-				<UserLocation>{ location}</UserLocation>
-		</UserData>
+			<UserData>
+				<UserImage
+					src={avatar}
+					alt={username}
+					width="320"
+				/>
+				<UserName>{username}</UserName>
+				<UserTag>@{tag}</UserTag>
+					<UserLocation>{ location}</UserLocation>
+			</UserData>
 
-		<UserStatsList>
-			<UserStatElement key={stats.followers}>
-				<Span>Followers</Span>
-				<Quantity>{ stats.followers}</Quantity>
-			</UserStatElement>
-				
-			<UserStatElement key={stats.views}>
-				<Span>Views</Span>
-				<Quantity>{ stats.views}</Quantity>
-			</UserStatElement>
-				
-			<UserStatElement key={stats.likes}>
-				<Span>Likes</Span>
-				<Quantity>{ stats.likes}</Quantity>
-			</UserStatElement>
-		</UserStatsList>
+			<UserStatsList>
+				<UserStatElement key={stats.followers}>
+					<Span>Followers</Span>
+					<Quantity>{ stats.followers}</Quantity>
+				</UserStatElement>
+					
+				<UserStatElement key={stats.views}>
+					<Span>Views</Span>
+					<Quantity>{ stats.views}</Quantity>
+				</UserStatElement>
+					
+				<UserStatElement key={stats.likes}>
+					<Span>Likes</Span>
+					<Quantity>{ stats.likes}</Quantity>
+				</UserStatElement>
+			</UserStatsList>
 		</UserCard>
 	);
 }
